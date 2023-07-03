@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { View, Text, SafeAreaView } from 'react-native';
+import { useTailwind } from 'tailwind-rn';
+import SafeViewAndroid from '../components/SafeViewAndroid';
 
 export default function CustomersScreen() {
+	const tailwind = useTailwind();
+
 	return (
-		<View>
+		<SafeAreaView style={SafeViewAndroid.AndroidSafeArea}>
 			<Text>CustomersScreen</Text>
-		</View>
+		</SafeAreaView>
 	);
 }
