@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 import { useTailwind } from 'tailwind-rn';
 import SafeViewAndroid from '../components/SafeViewAndroid';
 
