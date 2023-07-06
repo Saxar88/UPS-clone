@@ -10,7 +10,11 @@ import {
 } from '@apollo/client';
 
 const client = new ApolloClient({
-	uri: 'https://dashboard.stepzen.com/explorer?endpoint=api%2Ffuzzy-sheep',
+	uri: 'https://greencovesprings.stepzen.net/api/fuzzy-sheep/__graphql',
+	headers: {
+		Authorization:
+			'apikey greencovesprings::stepzen.io+1000::884cc659f322a56bc54bfd90204df4278375c94ca65b4d86c97cabda7738054b',
+	},
 	cache: new InMemoryCache(),
 });
 
