@@ -1,6 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabNavigator from './TabNavigator';
+import ModalScreen from '../screens/ModalScreen';
 
 export type RootStackParamList = {
 	Home: undefined;
@@ -8,13 +9,20 @@ export type RootStackParamList = {
 	Order: { order: any };
 };
 
-const RootStack = createNativeStackNavigator();
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
 	return (
 		<RootStack.Navigator>
 			<RootStack.Group>
 				<RootStack.Screen name='Home' component={TabNavigator} />
+			</RootStack.Group>
+			<RootStack.Group screenOptions={{ presentation: 'modal' }}>
+				<RootStack.Screen
+					options={{ headerShown: false }}
+					name='MyModal'
+					component={ModalScreen}
+				/>
 			</RootStack.Group>
 		</RootStack.Navigator>
 	);
