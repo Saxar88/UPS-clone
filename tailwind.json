@@ -158,6 +158,12 @@
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
 		}
 	},
+	"bg-[#eb6a7c]": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(235 106 124 / var(--tw-bg-opacity))"
+		}
+	},
 	"p-5": {
 		"style": {
 			"paddingTop": 20,
@@ -178,9 +184,26 @@
 			"paddingBottom": 20
 		}
 	},
+	"px-5": {
+		"style": {
+			"paddingLeft": 20,
+			"paddingRight": 20
+		}
+	},
+	"py-2": {
+		"style": {
+			"paddingTop": 8,
+			"paddingBottom": 8
+		}
+	},
 	"pb-0": {
 		"style": {
 			"paddingBottom": 0
+		}
+	},
+	"pb-5": {
+		"style": {
+			"paddingBottom": 20
 		}
 	},
 	"pb-52": {
