@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { useTailwind } from 'tailwind-rn';
 import { Card, Divider, Icon } from '@rneui/themed';
+import MapView, { Marker } from 'react-native-maps';
 
 type Props = { order: Order };
 
@@ -34,7 +35,7 @@ const DeliveryCard = ({ order }: Props) => {
 					</Text>
 				</View>
 				<Divider color='white' style={tw('my-3')} />
-				<View style={tw('mx-auto')}>
+				<View style={tw('mx-auto pb-5')}>
 					<Text style={tw('text-base text-center text-white font-bold')}>
 						Address:
 					</Text>
@@ -48,13 +49,30 @@ const DeliveryCard = ({ order }: Props) => {
 			</View>
 			<Divider color='white' style={tw('my-3')} />
 			<View style={tw('p-5')}>
-				{order.trackingItems.items.map((item) => (
-					<View style={tw('flex-row justify-between items-center')}>
+				{order.trackingItems.items.map((item, i) => (
+					<View key={i} style={tw('flex-row justify-between items-center')}>
 						<Text style={tw('text-sm font-bold text-white')}>{item.name}</Text>
 						<Text style={tw('text-sm text-white')}>x {item.quantity}</Text>
 					</View>
 				))}
 			</View>
+			<MapView
+				initialRegion={{
+					latitude: order.Lat,
+					longitude: order.Lng,
+					latitudeDelta: 0.005,
+					longitudeDelta: 0.005,
+				}}
+				style={tw('w-full h-[200px]')}>
+				{order.Lat && order.Lng && (
+					<Marker
+						coordinate={{ latitude: order.Lat, longitude: order.Lng }}
+						title='Delivery location'
+						description={order.Address}
+						identifier='destination'
+					/>
+				)}
+			</MapView>
 		</Card>
 	);
 };
