@@ -5,7 +5,7 @@ import ModalScreen from '../screens/ModalScreen';
 
 export type RootStackParamList = {
 	Home: undefined;
-	MyModal: { userId: String; name: String };
+	MyModal: { userId: string; name: string };
 	Order: { order: any };
 };
 
