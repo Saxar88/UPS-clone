@@ -26,6 +26,10 @@
   z-index: 10
 }
 
+.m-0 {
+  margin: 0px
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto
@@ -39,6 +43,14 @@
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem
+}
+
+.-mt-2 {
+  margin-top: -0.5rem
+}
+
+.-mt-3 {
+  margin-top: -0.75rem
 }
 
 .mb-5 {
@@ -77,16 +89,20 @@
   height: 16rem
 }
 
-.h-\[200px\] {
-  height: 200px
-}
-
 .w-full {
   width: 100%
 }
 
+.grow {
+  flex-grow: 1
+}
+
 .flex-row {
   flex-direction: row
+}
+
+.items-start {
+  align-items: flex-start
 }
 
 .items-center {
@@ -103,6 +119,10 @@
 
 .rounded-lg {
   border-radius: 0.5rem
+}
+
+.rounded-none {
+  border-radius: 0px
 }
 
 .border {
@@ -223,14 +243,14 @@
   color: rgb(89 193 204 / var(--tw-text-opacity))
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-
 .text-\[\#eb6a7c\] {
   --tw-text-opacity: 1;
   color: rgb(235 106 124 / var(--tw-text-opacity))
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity))
 }
 
 .text-gray-500 {
@@ -238,7 +258,7 @@
   color: rgb(107 114 128 / var(--tw-text-opacity))
 }
 
-.text-gray-400 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity))
+  color: rgb(255 255 255 / var(--tw-text-opacity))
 }
